@@ -45,7 +45,6 @@ class Calls extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          CardsCalls('Ridho', 'hari ini 19.00', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg', 'vidio call', 'accept'),
           FloatingActionButton(
             backgroundColor: Colors.green,
             onPressed: () {},
