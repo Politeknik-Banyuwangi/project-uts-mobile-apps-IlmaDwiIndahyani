@@ -21,8 +21,9 @@ class Calls extends StatelessWidget {
             ),
 
             // Masukkan Coding disini jangan rubah lainnya
-            CardsCalls('Ridho', 'hari ini 19.00', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg', 'vidio call', 'accept'),
-            //
+            CardsCalls('Moh salah', 'hari ini 04.00', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg', 'vidio call', 'accept'),
+            CardsCalls('Moh salah', 'hari ini 07.00', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg', 'call', 'reject'),
+            CardsCalls('Moh salah', 'hari ini 07.45', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg', 'vidio call', 'accept'),
             //
             //
             //
