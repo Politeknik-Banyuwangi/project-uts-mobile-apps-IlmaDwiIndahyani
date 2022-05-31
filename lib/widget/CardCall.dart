@@ -1,89 +1,83 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'widget/CardCalls.dart';
 
-class Calls extends StatelessWidget {
-  const Calls({Key? key}) : super(key: key);
-  // Masukkan coding disini
+class CardsCalls extends StatelessWidget {
+  // Menambahkan variabel atau atribut
+  final String _name;
+  final String _time;
+  final String _profilImage;
+  final String _calls;
+  final String _actionCalls;
+
+  const CardsCalls(this._name, this._time, this._profilImage, this._calls, this._actionCalls);
+
+  Icon checkPanggilan(
+    calls,
+  ) {
+    Icon icon = new Icon(
+      Icons.video_call,
+      color: Colors.green,
+    );
+    if (calls == 'call') {
+      icon = Icon(
+        Icons.call,
+        color: Colors.green,
+      );
+    } else {
+      icon = Icon(
+        Icons.video_call,
+        color: Colors.green,
+      );
+    }
+    ;
+    return icon;
+  }
+
+  Color checkAksiPanggilan(actionCalls) {
+    Color color = Colors.red;
+    if (actionCalls == 'accept') {
+      color = Colors.green;
+    } else {
+      color = Colors.red;
+    }
+    return color;
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: NotificationListener<OverscrollIndicatorNotification>(
-        onNotification: (_) {
-          _.disallowGlow();
-          return true;
-        },
-        child: ListView(
-          children: [
-            SizedBox(
-              height: 10,
-            ),
-
-            // Masukkan Coding disini jangan rubah lainnya
-            ListTile(
-              leading: CircleAvatar(
-                backgroundImage: NetworkImage("https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg"),
-                radius: 30.0,
-              ),
-              title: Text(
-                'SomeOne',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18.0,
-                ),
-              ),
-              subtitle: Row(
-                children: [
-                  Icon(
-                    Icons.south_west,
-                    color: Colors.green,
-                    size: 16.0,
-                  ),
-                  SizedBox(
-                    width: 3.0,
-                  ),
-                  Text(
-                    '24 menit yang lalu',
-                    style: TextStyle(
-                      fontSize: 16.0,
-                    ),
-                  ),
-                ],
-              ),
-              trailing: Icon(
-                Icons.videocam,
-                color: Colors.green,
-              ),
-            ),
-          ],
+    return ListTile(
+      leading: CircleAvatar(
+        backgroundImage: NetworkImage("${this._profilImage}"),
+        radius: 30.0,
+      ),
+      title: Padding(
+        padding: EdgeInsets.only(bottom: 4.0),
+        child: Text(
+          '${this._name}',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18.0,
+          ),
         ),
       ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+      subtitle: Row(
         children: [
-          FloatingActionButton(
-            backgroundColor: Colors.white,
-            focusElevation: 0.0,
-            onPressed: () {},
-            child: Icon(
-              Icons.video_call,
-              color: Colors.teal.shade900,
-            ),
+          Icon(
+            Icons.south_west,
+            color: checkAksiPanggilan(this._actionCalls),
+            size: 16.0,
           ),
           SizedBox(
-            height: 20,
+            width: 3.0,
           ),
-          FloatingActionButton(
-            backgroundColor: Colors.green,
-            onPressed: () {},
-            child: Icon(
-              Icons.add_call,
-              color: Colors.white,
+          Text(
+            '${this._time}',
+            style: TextStyle(
+              fontSize: 16.0,
             ),
           ),
         ],
       ),
+      trailing: checkPanggilan(this._calls),
     );
   }
 }
