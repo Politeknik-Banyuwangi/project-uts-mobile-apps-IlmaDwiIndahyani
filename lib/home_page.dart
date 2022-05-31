@@ -104,7 +104,7 @@ class _CameraState extends State<Camera> {
       body: Center(
         child: Text(
           "Ilma Dwi Indahyani+362055401110",
-          style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold, fontSize: 30),
+          style: TextStyle(color: Colors.teal, fontWeight: FontWeight.bold, fontSize: 15),
         ),
       ),
     );
