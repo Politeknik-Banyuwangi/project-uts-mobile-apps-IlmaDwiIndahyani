@@ -26,6 +26,8 @@ class Chats extends StatelessWidget {
             CardChats('Rendra', '08.45', 'Jangan lupa makan yah', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg'),
             CardChats('Zeldan', '08.00', 'Jangan lupa makan yah', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg'),
             CardChats('Hassan', '07.15', 'Jangan lupa makan yah', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg'),
+            CardChats('Dika', '05.00', 'Jangan lupa makan yah', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg'),
+            CardChats('Riza', '04.00', 'Jangan lupa makan yah', 'https://i0.wp.com/www.cirebonkota.go.id/wp-content/uploads/2018/05/jokowi.jpg'),
           ],
         ),
       ),
